@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pietanze",
+  "info": {
+    "singularName": "pietanza",
+    "pluralName": "pietanze",
+    "displayName": "pietanza",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "descrizione": {
+      "type": "richtext"
+    },
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "allergenes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::allergene.allergene"
+    },
+    "prezzo": {
+      "required": true,
+      "type": "float"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
