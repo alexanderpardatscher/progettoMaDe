@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import astro from './primi.astro';
 ---
 
 <Layout title="Locanda dal Barba">
@@ -7,19 +8,22 @@ import Layout from '../components/Layout.astro';
 		<h1 class="titolo">Benvenuto alla locanda dal Barba</h1>
 		<section class="corpo">
 			<ul class="lista">
-				<li> <a href="">Primi piatti </a>
-				<li> <a href="">Secondi piatti </a>
-				<li> <a href="">Contorni </a>
-				<li> <a href="">Pizze </a>
-				<li> <a href="">Dolci </a>
-				<li> <a href="">Bevande </a>
+				<li> <a href="/primi">Primi piatti </a>
+				<li> <a href="/secondi">Secondi piatti </a>
+				<li> <a href="/contorni">Contorni </a>
+				<li> <a href="/pizze">Pizze </a>
+				<li> <a href="/dolci">Dolci </a>
+				<li> <a href="/bevande">Bevande </a>
 			</ul>
 			<ul class="lista">
 				<li> <a href="">Vendita </a>
-				<li> <a href="">Allergeni </a>
+				<li> <a href="/allergeni">Allergeni </a>
 				<li> <a href="">Menù del Giorno </a>
 			</ul>
 		</section>
+
+		<primi />
+
 	</main>
 </Layout>
 <style>
