@@ -4,17 +4,21 @@
   "info": {
     "singularName": "menu-del-giorno",
     "pluralName": "menu-del-giornos",
-    "displayName": "menu-del-giorno"
+    "displayName": "menu-del-giorno",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "pietanze": {
+    "antipasti": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pietanza.pietanza"
+    },
+    "prezzo": {
+      "type": "decimal"
     }
   }
 }
