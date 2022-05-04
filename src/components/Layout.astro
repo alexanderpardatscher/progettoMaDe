@@ -53,9 +53,8 @@ const { title } = Astro.props as Props;
 
   .titolo{
 		text-align: center;
-		background-image: linear-gradient(to right, red, yellow);
-		-webkit-background-clip: text;
-		color: transparent;
+    font-size: xx-large;
+		color: white;
 	}	
 
   body {
@@ -67,7 +66,9 @@ const { title } = Astro.props as Props;
   }
 
   header{
-
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, blue, cyan);
   }
 
   :global(h1) {
