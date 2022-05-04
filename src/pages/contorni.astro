@@ -5,11 +5,37 @@ import Layout from '../components/Layout.astro';
 <Layout title="Locanda dal Barba">
     <main>
         <h1>Contorni</h1>
+        <article class="scatola">
+            <h3 class="pietanza">Panna Cotta</h3>
+
+        </article>
+
     </main>
 </Layout>
 
 <style>
     h1{
+        text-align: center;
+        background-image: linear-gradient(to right, yellow, green);
+		-webkit-background-clip: text;
+		color: transparent;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .scatola{
+        align-self: center;
+        width: 50%;
+        border: solid;
+        border-width: 5px;
+        color: black;
+    }
+
+    .pietanza{
         text-align: center;
         background-image: linear-gradient(to right, yellow, green);
 		-webkit-background-clip: text;
