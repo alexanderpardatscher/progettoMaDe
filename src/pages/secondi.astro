@@ -1,15 +1,22 @@
 ---
 import Layout from '../components/Layout.astro';
+
+const data = await  fetch("http://localhost:1337/api/pietanze/");
+const response = await data.json();
+let nomi = await response.data.filter(d => d.attributes.tipo==="secondo");
+
 ---
 
 <Layout title="Locanda dal Barba">
     <main>
         <h1>Secondi Piatti</h1>
-
-        <article class="scatola">
-            <h3 class="pietanza">Entrecote di manzo alla piastra</h3>
-
-        </article>
+            <div>
+                {nomi.map((data)=>
+                <article class="scatola"> 
+                    <h3 class="pietanza">{data.attributes.nome}</h3>
+                    <p>{data.attributes.prezzo}€</p>
+                </article>)}
+            </div>
     </main>
 </Layout>
 
@@ -25,6 +32,13 @@ import Layout from '../components/Layout.astro';
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
     }
 
     .scatola{
