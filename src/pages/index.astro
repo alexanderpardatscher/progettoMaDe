@@ -1,6 +1,15 @@
 ---
 import Layout from '../components/Layout.astro';
 import astro from './primi.astro';
+
+let name;
+fetch("http://localhost:1337/api/pietanze").then(data=>{
+  return data.json();
+}).then(response=>{
+  console.log(response.data[0].attributes.nome);
+  name = response.data[0].attributes.nome;
+  console.log(name);
+})
 ---
 
 <Layout title="Locanda dal Barba">

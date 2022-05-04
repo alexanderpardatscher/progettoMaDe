@@ -17,6 +17,21 @@
       "relation": "oneToMany",
       "target": "api::pietanza.pietanza"
     },
+    "primi": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pietanza.pietanza"
+    },
+    "secondi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pietanza.pietanza"
+    },
+    "dolce": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pietanza.pietanza"
+    },
     "prezzo": {
       "type": "decimal"
     }
