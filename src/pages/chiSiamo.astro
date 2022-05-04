@@ -1,0 +1,38 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Locanda dal Barba">
+    <main>
+        <h1>/\Chi siamo/\</h1>
+        <article>
+            <p>La Locanda dal Barba è un locale accogliente e inclusivo, dove persone svantaggiate possono inserirsi in un contesto di integrazione umana e lavorativa, affiancati da personale competente. La positività del luogo si riflette anche nella preparazione dei piatti, realizzati con prodotti del territorio cucinati con cura e attenzione al dettaglio.
+                <a href="https://pastificio-dal-barba.company.site/">Pagina del pastificio qui</a>
+            </p>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    h1{
+        text-align: center;
+        background-image: linear-gradient(to right, cyan, yellow);
+		-webkit-background-clip: text;
+		color: transparent;
+    }
+
+     main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    article{
+        align-self: center;
+        width: 75%;
+        border: solid;
+        border-width: 5px;
+        color: black;
+    }
+
+</style>
