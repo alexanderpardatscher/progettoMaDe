@@ -1,12 +1,18 @@
 ---
 import Layout from '../components/Layout.astro';
+
+const data = await  fetch("http://localhost:1337/api/allergeni/");
+const response = await data.json();
+let nomi = await response.data;
 ---
 
 <Layout title="Locanda dal Barba">
     <main>
-        <h1>Allergeni</h1>
-        <h2>Qui sotto sono indicate le categorie per la ricerca delle intolleranze o preferenze</h2>
-
+        {nomi.map((data)=>            
+            <article class="scatola"> 
+                <h3 class="pietanza">{data.attributes.tipo}</h3>
+            </article>)}
+        )}
     </main>
 </Layout>
 
