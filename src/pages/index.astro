@@ -2,18 +2,18 @@
 import Layout from '../components/Layout.astro';
 import astro from './primi.astro';
 
-const data = await fetch("http://localhost:1337/api/pietanze/");
+/**const data = await fetch("http://localhost:1337/api/pietanze/");
 const response = await data.json();
 const name = response.data;
-console.log(name);
+console.log(name);*/
 
 ---
 
 <Layout title="Locanda dal Barba">
 	<main>
-		<ul>
+		<!--<ul>
 			{name.map((data)=> <li>{data.attributes.nome}</li>)}
-		</ul>
+		</ul>-->
 		<section class="corpo">
 			<ul class="lista">
 				<li> <a href="/primi">Primi piatti </a></li>
