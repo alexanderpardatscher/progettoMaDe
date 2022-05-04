@@ -1,5 +1,8 @@
 ---
 import Layout from '../components/Layout.astro';
+
+const data = await  fetch("http://localhost:1337/api/pietanze/");
+const response = await data.json();
 ---
 
 <Layout title="Locanda dal Barba">
