@@ -2,15 +2,22 @@
 import Layout from '../components/Layout.astro';
 import Header from '../components/Header.astro';
 
-const data = await  fetch("http://localhost:1337/api/pietanze/");
+const data = await  fetch("http://localhost:1337/api/pietanze/?populate=allergenes");
 const response = await data.json();
-let nomi = await response.data.filter(d => d.attributes.tipo==="Bevanda");
+let nomi = await response.data.filter(d=> {
+    if (d.attributes.allergenes.data.length!==0){
+        for(let i=0;i<d.attributes.allergenes.data.length;i++)
+            if(d.attributes.allergenes.data[0].attributes.tipo.includes("Gusci"))
+                return false;
+    }
+    return true;
+});
 ---
 
 <Layout title="Locanda dal Barba">
     <Header />
     <main>
-        <h1>Senza guscio</h1>
+        <h1>Pietanze senza guscio</h1>
         <div>
             {nomi.map((data)=>
             <article class="scatola"> 
