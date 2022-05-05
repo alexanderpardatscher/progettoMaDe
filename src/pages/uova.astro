@@ -1,0 +1,59 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+
+const data = await  fetch("http://localhost:1337/api/pietanze/");
+const response = await data.json();
+let nomi = await response.data.filter(d => d.attributes.tipo==="Bevanda");
+---
+
+<Layout title="Locanda dal Barba">
+    <Header />
+    <main>
+        <h1>Pietanze senza uova</h1>
+        <div>
+            {nomi.map((data)=>
+            <article class="scatola"> 
+                <h3 class="pietanza">{data.attributes.nome}</h3>
+                <p>{data.attributes.prezzo}€</p>
+            </article>)}
+        </div>
+    </main>
+</Layout>
+
+<style>
+    h1{
+        text-align: center;
+        background-image: linear-gradient(to right, black, cyan);
+		-webkit-background-clip: text;
+		color: transparent;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .scatola{
+        align-self: center;
+        width: 50%;
+        border: solid;
+        border-width: 5px;
+        color: black;
+    }
+
+    .pietanza{
+        text-align: center;
+        background-image: linear-gradient(to right, black, cyan);
+		-webkit-background-clip: text;
+		color: transparent;
+    }
+</style>
