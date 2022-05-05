@@ -4,7 +4,8 @@
   "info": {
     "singularName": "allergene",
     "pluralName": "allergeni",
-    "displayName": "allergene"
+    "displayName": "allergene",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,16 +14,6 @@
   "attributes": {
     "tipo": {
       "type": "string"
-    },
-    "img": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true
     },
     "slug": {
       "type": "uid",
