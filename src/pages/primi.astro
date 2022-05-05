@@ -5,7 +5,6 @@ const data = await  fetch("http://localhost:1337/api/pietanze/");
 const response = await data.json();
 let nomi = await response.data.filter(d => d.attributes.tipo==="primo");
 
-
 ---
 
 <Layout title="Locanda dal Barba">
