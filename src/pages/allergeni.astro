@@ -10,12 +10,42 @@ let nomi = await response.data;
 <Layout title="Locanda dal Barba">
     <Header />
     <main>
-        {nomi.map((data)=>            
-            <article class="scatola"> 
-                <h3 class="pietanza">{data.attributes.tipo}</h3>
-            </article>)}
-        <br>
-        <a href="/vegetariano">Menù vegetariano</a>
+        <div class="esterno">
+            <div class="interno">
+                <a href="/vegetariano">
+                    Menù vegetariano
+                    <img src="/src/img/veg.png">
+                </a>
+            </div>
+            <br>
+            <div class="interno">
+                <a href="/latticini">
+                    <img src="/src/img/lattosio.png">
+                    Senza Latticini
+                </a>
+            </div>
+            <br>
+            <div class="interno">
+                <a href="/uova">
+                    Senza Uova
+                    <img src="/src/img/uova.png">
+                </a>
+            </div>
+            <br>
+            <div class="interno">
+                <a href="/glutine">
+                    <img src="/src/img/grano.png">
+                    Senza glutine
+                </a>
+            </div>
+            <br>
+            <div class="interno">
+                <a href="/gusci">
+                    Senza guscio
+                    <img src="/src/img/fruttaSecca.png">
+                </a>
+            </div>
+        </div>
     </main>
 </Layout>
 
@@ -29,6 +59,22 @@ let nomi = await response.data;
 
     h2{
         text-align: center;
+    }
+
+    .esterno{
+        height: 2391px;
+        width:100%;
+        
+    }
+
+    img{
+        height: 25%;
+        width: 100%;
+    }
+
+    .interno{
+        display: flex;
+        height: 25%;
     }
 
 </style>
