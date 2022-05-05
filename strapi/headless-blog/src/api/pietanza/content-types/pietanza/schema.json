@@ -25,8 +25,9 @@
     },
     "allergenes": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::allergene.allergene"
+      "relation": "manyToMany",
+      "target": "api::allergene.allergene",
+      "inversedBy": "pietanzas"
     },
     "prezzo": {
       "required": true,

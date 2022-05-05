@@ -19,6 +19,12 @@
       "type": "uid",
       "targetField": "tipo",
       "required": true
+    },
+    "pietanzas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pietanza.pietanza",
+      "inversedBy": "allergenes"
     }
   }
 }

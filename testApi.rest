@@ -1,1 +1,1 @@
-GET http://localhost:1337/api/pietanze
+GET http://localhost:1337/api/pietanze?populate=allergenes
