@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
 
 const data = await  fetch("http://localhost:1337/api/pietanze/");
 const response = await data.json();
@@ -7,6 +8,7 @@ let nomi = await response.data.filter(d => d.attributes.tipo==="contorno");
 ---
 
 <Layout title="Locanda dal Barba">
+    <Header />
     <main>
         <h1>Contorni</h1>
         <div>

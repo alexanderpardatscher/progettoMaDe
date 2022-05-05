@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
 
 const data = await  fetch("http://localhost:1337/api/pietanze/");
 const response = await data.json();
@@ -9,6 +10,7 @@ let nomi2 = await response.data.filter(g => g.attributes.tipo==="secondo-bimbi")
 ---
 
 <Layout title="Locanda dal Barba">
+    <Header />
     <main>
         <h1>Menu Bimbi</h1>
 
